@@ -37,7 +37,7 @@ def compareScore(userScore, dealerScore):
   else:
     return "You lose 😤"
 
-# function dealCard returns a random number from a list 
+# function dealCard() returns a random number from a list 
 def dealCard():
     cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11]
     
@@ -49,11 +49,12 @@ def blackJack():
     end = True
     user = []
     dealer = []
-    
-    for i in range(0,2):
+    # deal 2 cards to user and dealer
+    for i in range():
         user.append(dealCard())
         dealer.append(dealCard())
-    
+        
+    # while user score and dealer score are not 21 and the user wants more cards, keep running loop
     while end:
         userScore = calculateScore(user)
         dealerScore = calculateScore(dealer)
@@ -69,7 +70,7 @@ def blackJack():
                 userScore = calculateScore(user)
             else:
                   end = False
-        
+    # if dealer doesn't have 21, keep dealing cards until score is greater than or equal to 17
     while dealerScore != 21 and dealerScore < 17:
             dealer.append(dealCard())
             dealerScore = calculateScore(dealer)
